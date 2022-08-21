@@ -1,4 +1,7 @@
 package ru.javarush.drachkov.bora_bora.floraandfauna.plants;
 
-public class Plant {
+import ru.javarush.drachkov.bora_bora.floraandfauna.animals.BasicItem;
+
+public class Plant extends BasicItem {
+
 }
