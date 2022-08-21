@@ -14,19 +14,13 @@ public class Main {
         grid[2][3] = new Field();
         grid[1][1] = new Field();
 
-
-    for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 5; i++) {
         for (int j = 0; j < 5; j++) {
 
             System.out.print(" " + grid[i][j] + " ");
         }
         System.out.println();
-
-
     }
-        System.out.println();
 }
-
-
 }
 
