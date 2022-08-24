@@ -1,13 +1,10 @@
 package ru.javarush.drachkov.bora_bora.floraandfauna.animals;
 
 public class Duck extends Herbivore{
-    String name = "🦆" ;
+    String emogi = "🦆" ;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+    double weight = 1;
+    int maxNumberOfAnimals = 1000;
+    int movementSpeed = 0;
+    double saturation = 0;
 }

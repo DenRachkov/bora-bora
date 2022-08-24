@@ -1,10 +1,10 @@
 package ru.javarush.drachkov.bora_bora.floraandfauna.animals;
 
 public class Animals extends BasicItem{
-    Double weight;
+    double weight;
     int maxNumberOfAnimals;
     int movementSpeed;
-    Double saturation;
+    double saturation;
 
 
     public void toEat(){
@@ -13,14 +13,11 @@ public class Animals extends BasicItem{
     public void toMultiply() {
 
     }
+    public void directionOfMovement () {
 
-    public int getMaxNumberOfAnimals() {
-        return maxNumberOfAnimals;
     }
 
-    public void setMaxNumberOfAnimals(int maxNumberOfAnimals) {
-        this.maxNumberOfAnimals = maxNumberOfAnimals;
-    }
+
 
 
 }
