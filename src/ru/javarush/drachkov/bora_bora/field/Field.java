@@ -15,14 +15,17 @@ public class Field {
     public static void getField() {
 
 
-        Cell[][] grid = new Cell[5][5];
+        Cell[][] grid = new Cell[2][2];
 
-        for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 5; j++) {
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
                 grid[i][j] = new Cell(i,j);
 
-                grid[i][j].getArr().forEach(Animal -> System.out.println(Animal.getEmogi));
+
+                grid[i][j].getArr().forEach(animal -> out.println(animal.getEmogi()));
+                out.println(grid[i][j].getArr().size());
             }
+
         }
 
 

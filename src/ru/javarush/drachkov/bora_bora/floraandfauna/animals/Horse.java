@@ -1,19 +1,19 @@
 package ru.javarush.drachkov.bora_bora.floraandfauna.animals;
 
-public class Deer extends Herbivore{
+public class Horse extends Herbivore{
 
-    //public String emogi = "\uD83E\uDD8C";
-    public double weight = 300;
+    //public String emogi = "\uD83D\uDC0E";
+    public double weight = 400;
     public int maxNumberOfAnimals = 20;
     public int movementSpeed = 4;
-    public double saturation = 50;
+    public double saturation = 60;
 
-    public Deer(int x, int y) {
+    public Horse(int x, int y) {
         super(x, y);
     }
 
     @Override
     public String getEmogi() {
-        return "\uD83E\uDD8C";
+        return "\uD83D\uDC0E";
     }
 }
