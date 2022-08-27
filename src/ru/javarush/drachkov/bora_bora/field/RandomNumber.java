@@ -1,15 +1,12 @@
 package ru.javarush.drachkov.bora_bora.field;
 
 
+import java.util.Random;
 
 public class RandomNumber {
-    public static int getRandomNumber() {
-        int min = 0;
-        int max = 30;
-        int randomNumber = (int)(Math.random() * (max + 1 - min) + min);
-        System.out.println(randomNumber);
-
-        return 0;
+    public static int get(int number) {
+        Random random = new Random();
+        return random.nextInt(number);
     }
 
 }

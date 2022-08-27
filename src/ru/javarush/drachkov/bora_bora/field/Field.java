@@ -1,28 +1,28 @@
 package ru.javarush.drachkov.bora_bora.field;
 
-import ru.javarush.drachkov.bora_bora.floraandfauna.animals.*;
 
-import java.util.ArrayList;
+import ru.javarush.drachkov.bora_bora.floraandfauna.animals.Animal;
+import ru.javarush.drachkov.bora_bora.floraandfauna.animals.BasicItem;
 
+
+import static java.lang.System.*;
 
 public class Field {
+    private static int x;
+    private static int y;
+
+
     public static void getField() {
 
-        ArrayList<BasicItem> arr = new ArrayList<>();
-        arr.add(new Fox());
-        arr.add(new Wolf());
-        arr.add(new Animals());
 
-        Field[][] grid = new Field[5][5];
-
-        grid[1][2] = new Field();
+        Cell[][] grid = new Cell[5][5];
 
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++) {
+                grid[i][j] = new Cell(i,j);
 
-                System.out.print(" " + grid[i][j] + " ");
+                grid[i][j].getArr().forEach(Animal -> System.out.println(Animal.getEmogi));
             }
-            System.out.println();
         }
 
 
