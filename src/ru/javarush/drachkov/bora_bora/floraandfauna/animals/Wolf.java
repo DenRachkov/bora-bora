@@ -1,9 +1,9 @@
 package ru.javarush.drachkov.bora_bora.floraandfauna.animals;
 
-public class Wolf extends Predator{
+public class Wolf extends Predator {
 
 
-    public  String emogi = "\uD83D\uDC3A";
+    public String emogi = "\uD83D\uDC3A";
     public double weight = 50;
     public int maxNumberOfAnimals = 30;
     public int movementSpeed = 3;
@@ -16,6 +16,51 @@ public class Wolf extends Predator{
 
     @Override
     public String getEmogi() {
-        return "\uD83D\uDC3A";
+        return emogi;
+    }
+
+    @Override
+    public void setEmogi(String emogi) {
+        this.emogi = emogi;
+    }
+
+    @Override
+    public double getWeight() {
+        return weight;
+    }
+
+    @Override
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    @Override
+    public int getMaxNumberOfAnimals() {
+        return maxNumberOfAnimals;
+    }
+
+    @Override
+    public void setMaxNumberOfAnimals(int maxNumberOfAnimals) {
+        this.maxNumberOfAnimals = maxNumberOfAnimals;
+    }
+
+    @Override
+    public int getMovementSpeed() {
+        return movementSpeed;
+    }
+
+    @Override
+    public void setMovementSpeed(int movementSpeed) {
+        this.movementSpeed = movementSpeed;
+    }
+
+    @Override
+    public double getSaturation() {
+        return saturation;
+    }
+
+    @Override
+    public void setSaturation(double saturation) {
+        this.saturation = saturation;
     }
 }

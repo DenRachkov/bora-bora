@@ -1,48 +1,55 @@
 package ru.javarush.drachkov.bora_bora.field;
 
 import ru.javarush.drachkov.bora_bora.floraandfauna.animals.*;
+import ru.javarush.drachkov.bora_bora.floraandfauna.plants.Plant;
 
 import java.util.ArrayList;
 
-public class Cell {
-    private static int x;
-    private static int y;
-    public static ArrayList<Animal> arr = new ArrayList<>();
-    { arr.add(new Fox(x,y));
-        arr.add(new Wolf(x,y));
-        arr.add(new Duck(x,y));}
 
+public class Cell {
+    private int x;
+    private int y;
+    public ArrayList<BasicItem> arr = new ArrayList<>();
 
 
     public Cell(int x, int y) {
         this.x = x;
         this.y = y;
-        //this.arr = arr;
-        //completion( arr, x, y);
+        completion(arr, x, y);
     }
 
-   /* public static void completion(ArrayList<Animal>arr, int x, int y) {
+    public void completion(ArrayList<BasicItem> arr, int x, int y) {
 
-        arr.add(new Fox(x,y));
-        arr.add(new Wolf(x,y));
-        arr.add(new Duck(x,y));
+        for (int i = 1; i <= Field.creatingQuantity(new Fox(x,y).maxNumberOfAnimals); i++) {
+            arr.add(new Fox(x, y));
+        }for (int i = 1; i <= Field.creatingQuantity(new Mouse(x,y).maxNumberOfAnimals); i++) {
+            arr.add(new Mouse(x, y));
+        }   for (int i = 1; i <= Field.creatingQuantity(new Duck(x,y).maxNumberOfAnimals); i++) {
+            arr.add(new Duck(x, y));
+        }   for (int i = 1; i <= Field.creatingQuantity(new Horse(x,y).maxNumberOfAnimals); i++) {
+            arr.add(new Horse(x, y));
+        }   for (int i = 1; i <= Field.creatingQuantity(new Plant(x,y).maxNumberOfAnimals); i++) {
+            arr.add(new Plant(x, y));
+        }
+    }
 
-
-    }*/
-
-    public static int getX() {
+    public int getX() {
         return x;
     }
-    public static void setX(int x) {
-        Cell.x = x;
+
+    public void setX(int x) {
+        this.x = x;
     }
-    public static int getY() {
+
+    public int getY() {
         return y;
     }
-    public static void setY(int y) {
-        Cell.y = y;
+
+    public void setY(int y) {
+        this.y = y;
     }
-    public static ArrayList<Animal> getArr() {
+
+    public ArrayList<BasicItem> getArr() {
         return arr;
     }
 

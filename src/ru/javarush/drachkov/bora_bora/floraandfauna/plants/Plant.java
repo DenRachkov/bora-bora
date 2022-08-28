@@ -5,9 +5,19 @@ import ru.javarush.drachkov.bora_bora.floraandfauna.animals.BasicItem;
 public class Plant extends BasicItem {
     private static int x;
     private static int y;
+    public String emogi = "\uD83C\uDF3F";
+    public double weight = 1;
+    public int maxNumberOfAnimals = 200;
 
-    public static double weight = 1;
-    public static int maxNumberOfAnimals = 200;
+    @Override
+    public String getEmogi() {
+        return emogi;
+    }
+
+    @Override
+    public void setEmogi(String emogi) {
+        this.emogi = emogi;
+    }
 
     public Plant(int x, int y) {
         super(x, y);
@@ -29,19 +39,21 @@ public class Plant extends BasicItem {
         Plant.y = y;
     }
 
-    public static double getWeight() {
+    @Override
+    public double getWeight() {
         return weight;
     }
 
-    public static void setWeight(double weight) {
-        Plant.weight = weight;
+    @Override
+    public void setWeight(double weight) {
+        this.weight = weight;
     }
 
-    public static int getMaxNumberOfAnimals() {
+    public int getMaxNumberOfAnimals() {
         return maxNumberOfAnimals;
     }
 
-    public static void setMaxNumberOfAnimals(int maxNumberOfAnimals) {
-        Plant.maxNumberOfAnimals = maxNumberOfAnimals;
+    public void setMaxNumberOfAnimals(int maxNumberOfAnimals) {
+        this.maxNumberOfAnimals = maxNumberOfAnimals;
     }
 }

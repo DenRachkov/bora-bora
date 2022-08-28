@@ -2,7 +2,7 @@ package ru.javarush.drachkov.bora_bora.floraandfauna.animals;
 
 public class Hog extends Herbivore {
 
-   // public String emogi = "\uD83D\uDC17";
+    public String emogi = "\uD83D\uDC17";
     public double weight = 400;
     public int maxNumberOfAnimals = 50;
     public int movementSpeed = 2;
@@ -14,6 +14,51 @@ public class Hog extends Herbivore {
 
     @Override
     public String getEmogi() {
-        return "\uD83D\uDC17";
+        return emogi;
+    }
+
+    @Override
+    public void setEmogi(String emogi) {
+        this.emogi = emogi;
+    }
+
+    @Override
+    public double getWeight() {
+        return weight;
+    }
+
+    @Override
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    @Override
+    public int getMaxNumberOfAnimals() {
+        return maxNumberOfAnimals;
+    }
+
+    @Override
+    public void setMaxNumberOfAnimals(int maxNumberOfAnimals) {
+        this.maxNumberOfAnimals = maxNumberOfAnimals;
+    }
+
+    @Override
+    public int getMovementSpeed() {
+        return movementSpeed;
+    }
+
+    @Override
+    public void setMovementSpeed(int movementSpeed) {
+        this.movementSpeed = movementSpeed;
+    }
+
+    @Override
+    public double getSaturation() {
+        return saturation;
+    }
+
+    @Override
+    public void setSaturation(double saturation) {
+        this.saturation = saturation;
     }
 }
