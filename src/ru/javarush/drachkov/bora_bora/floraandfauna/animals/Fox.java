@@ -9,6 +9,8 @@ public class Fox extends Predator {
     public int movementSpeed = 2;
     public double saturation = 2;
 
+
+
     public Fox(int x, int y) {
         super(x, y);
     }

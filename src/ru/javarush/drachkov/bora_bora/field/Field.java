@@ -1,30 +1,33 @@
 package ru.javarush.drachkov.bora_bora.field;
 
 
-import static java.lang.System.*;
+import static java.lang.System.out;
 
 public class Field {
-    private static int x;
-    private static int y;
+    public static final int WIDTH = 3;
+    public static final int HEIGHT = 3;
+    public static final Cell[][] GRID = new Cell[WIDTH][HEIGHT];
+    private int x;
+    private int y;
 
 
     public static void getField() {
 
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                GRID[i][j] = new Cell(i, j);
 
-        Cell[][] grid = new Cell[5][5];
+                GRID[i][j].getArr().forEach(animal -> out.print("[" + animal.getEmogi() + "]"));
+                out.println(GRID[i][j].getArr().size());
 
-        for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 5; j++) {
-                grid[i][j] = new Cell(i, j);
-
-                grid[i][j].getArr().forEach(animal -> out.print( "[" + animal.getEmogi() + "]" ));
-                out.println(grid[i][j].getArr().size());
             }
-            out.println();
         }
     }
+
 
     public static int creatingQuantity(int maxNumberOfAnimals) {
         return RandomNumber.get(maxNumberOfAnimals);
     }
+
+
 }

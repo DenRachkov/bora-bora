@@ -1,17 +1,10 @@
 package ru.javarush.drachkov.bora_bora.floraandfauna.animals;
 
-import java.util.function.Consumer;
 
 public abstract class Animal extends BasicItem {
-    public int movementSpeed;
-    public double saturation;
-
-
     public Animal(int x, int y) {
         super(x, y);
     }
-
-
 
     public void toEat() {
 
@@ -20,11 +13,6 @@ public abstract class Animal extends BasicItem {
     public void toMultiply() {
 
     }
-
-    public void directionOfMovement() {
-
-    }
-
 
     public int getMovementSpeed() {
         return movementSpeed;
@@ -42,3 +30,4 @@ public abstract class Animal extends BasicItem {
         this.saturation = saturation;
     }
 }
+

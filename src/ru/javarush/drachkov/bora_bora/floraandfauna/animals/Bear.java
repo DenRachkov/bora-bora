@@ -8,6 +8,7 @@ public class Bear extends Predator{
     public int movementSpeed = 2;
     public double saturation = 80;
 
+
     public Bear(int x, int y) {
         super(x, y);
     }

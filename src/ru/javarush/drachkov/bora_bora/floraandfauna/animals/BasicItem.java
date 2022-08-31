@@ -1,19 +1,75 @@
 package ru.javarush.drachkov.bora_bora.floraandfauna.animals;
 
+import ru.javarush.drachkov.bora_bora.field.Field;
+import ru.javarush.drachkov.bora_bora.field.RandomNumber;
+
+import java.util.ArrayList;
 
 
 public class BasicItem {
-    private static int x;
-    private static int y;
+    private int x;
+    private int y;
 
     public String emogi;
     public double weight;
     public int maxNumberOfAnimals;
+    public int movementSpeed;
+    public double saturation;
+
+    //TODO: доделать метод + проверки!!!
+    private void moving(int x, int y) {
+        ArrayList<String> step = new ArrayList<>();
+        if (getX() > 0) {
+            step.add("Left");
+        }
+        if (getX() < Field.WIDTH) {
+            step.add("Right");
+        }
+        if (getY() > 0) {
+            step.add("Up");
+        }
+        if (getY() < Field.HEIGHT) {
+            step.add("Down");
+        }
+        int random = RandomNumber.get(step.size());
+        String side = step.get(random);
+        switch (side) {
+            case "Left" -> x = newX(x, -1);
+            case "Right" -> x = newX(x, 1);
+            case "Up" -> y = newY(y, -1);
+            case "Down" -> y = newY(y, 1);
+        }
 
 
+    }
 
-    public static int getX() {
+    private int newX(int x, int i) {
+        return x + this.movementSpeed * i;
+    }
+
+    private int newY(int y, int i) {
+        return y + this.movementSpeed * i;
+    }
+
+
+    public int getMovementSpeed() {
+        return movementSpeed;
+    }
+
+    public int getX() {
         return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
     }
 
     public int getMaxNumberOfAnimals() {
@@ -24,17 +80,6 @@ public class BasicItem {
         this.maxNumberOfAnimals = maxNumberOfAnimals;
     }
 
-    public static void setX(int x) {
-        BasicItem.x = x;
-    }
-
-    public static int getY() {
-        return y;
-    }
-
-    public static void setY(int y) {
-        BasicItem.y = y;
-    }
 
     public String getEmogi() {
         return emogi;
@@ -56,8 +101,6 @@ public class BasicItem {
         this.x = x;
         this.y = y;
     }
-
-
 
 
 }
